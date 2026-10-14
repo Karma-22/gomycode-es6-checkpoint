@@ -1,0 +1,14 @@
+{
+  "name": "gomycode-es6-checkpoint",
+  "version": "1.0.0",
+  "description": "GoMyCode Bootcamp - Checkpoint ES6 (Algorithms, modern JavaScript ES6+, functional programming and CodeWars challenges)",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "start": "node src/index.js"
+  },
+  "keywords": ["es6", "javascript", "gomycode", "codewars", "algorithms"],
+  "author": "Karma-22 (Darius Ange)",
+  "license": "MIT"
+}

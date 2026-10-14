@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoMyCode ES6 Checkpoint - Katas & Algorithms</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="hero">
+      <div class="badge">GoMyCode Bootcamp • Checkpoint ES6</div>
+      <h1>ES6+ Algorithms & CodeWars Katas</h1>
+      <p class="subtitle">Collection complète d'algorithmes modernes ES6 (Arrow functions, Destructuring, Spread/Rest, High-Order Functions, Classes) développée par <strong>Karma-22 (Darius Ange)</strong>.</p>
+      
+      <div class="hero-stats">
+        <div class="stat-card">
+          <span class="stat-num">300+</span>
+          <span class="stat-label">Points CodeWars</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">22/22</span>
+          <span class="stat-label">Tests Unitaires Passés</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">ES6+</span>
+          <span class="stat-label">JavaScript Moderne</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="grid-layout">
+      <!-- Section 1 : String Utils -->
+      <section class="card">
+        <div class="card-header">
+          <span class="tag">Strings</span>
+          <h2>Manipulation de Chaînes</h2>
+        </div>
+        <div class="card-body">
+          <div class="form-group">
+            <label for="str-input">Texte à tester :</label>
+            <input type="text" id="str-input" value="GoMyCode Bootcamp 2026">
+          </div>
+          <div class="btn-group">
+            <button id="btn-reverse" class="btn btn-primary">Inverser</button>
+            <button id="btn-palindrome" class="btn btn-secondary">Palindrome ?</button>
+            <button id="btn-vowels" class="btn btn-secondary">Compter voyelles</button>
+            <button id="btn-mask" class="btn btn-secondary">Masquer</button>
+          </div>
+          <div class="output-box" id="str-output">Résultat s'affichera ici...</div>
+        </div>
+      </section>
+
+      <!-- Section 2 : Array Utils -->
+      <section class="card">
+        <div class="card-header">
+          <span class="tag">Arrays</span>
+          <h2>Tableaux & High-Order Functions</h2>
+        </div>
+        <div class="card-body">
+          <div class="form-group">
+            <label for="arr-input">Tableau de nombres (séparés par virgules) :</label>
+            <input type="text" id="arr-input" value="12, 5, 8, 130, 44, 5, 12">
+          </div>
+          <div class="btn-group">
+            <button id="btn-minmax" class="btn btn-primary">Min / Max</button>
+            <button id="btn-sum" class="btn btn-secondary">Somme & Moyenne</button>
+            <button id="btn-dedup" class="btn btn-secondary">Sans Doublons (Set)</button>
+            <button id="btn-evens" class="btn btn-secondary">Filtrer Pairs</button>
+          </div>
+          <div class="output-box" id="arr-output">Résultat s'affichera ici...</div>
+        </div>
+      </section>
+
+      <!-- Section 3 : Math & Logic -->
+      <section class="card">
+        <div class="card-header">
+          <span class="tag">Math</span>
+          <h2>Logique Mathématique</h2>
+        </div>
+        <div class="card-body">
+          <div class="form-group">
+            <label for="num-input">Nombre N :</label>
+            <input type="number" id="num-input" value="7">
+          </div>
+          <div class="btn-group">
+            <button id="btn-fact" class="btn btn-primary">Factorielle</button>
+            <button id="btn-prime" class="btn btn-secondary">Premier ?</button>
+            <button id="btn-fibo" class="btn btn-secondary">Fibonacci(N)</button>
+            <button id="btn-fizz" class="btn btn-secondary">FizzBuzz(N)</button>
+          </div>
+          <div class="output-box" id="num-output">Résultat s'affichera ici...</div>
+        </div>
+      </section>
+
+      <!-- Section 4 : CodeWars Katas -->
+      <section class="card">
+        <div class="card-header">
+          <span class="tag tag-gold">Katas</span>
+          <h2>CodeWars 300 Points Challenges</h2>
+        </div>
+        <div class="card-body">
+          <div class="kata-item">
+            <strong>Spin Words (6 kyu) :</strong> Inverser les mots de >= 5 lettres
+            <button id="btn-spin" class="btn btn-sm">Tester: "Hey fellow warriors"</button>
+          </div>
+          <div class="kata-item">
+            <strong>Digital Root (6 kyu) :</strong> Somme récursive des chiffres
+            <button id="btn-root" class="btn btn-sm">Tester: 942 (doit donner 6)</button>
+          </div>
+          <div class="kata-item">
+            <strong>RGB to Hex (5 kyu) :</strong> Convertir RGB en Hexadécimal
+            <button id="btn-rgb" class="btn btn-sm">Tester: rgb(255, 99, 71)</button>
+          </div>
+          <div class="kata-item">
+            <strong>Who likes it ? (6 kyu) :</strong> Système de likes Facebook
+            <button id="btn-likes" class="btn btn-sm">Tester: ["Alex", "Jacob", "Mark", "Max"]</button>
+          </div>
+          <div class="output-box" id="kata-output">Cliquez sur un test de Kata ci-dessus...</div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>GoMyCode Bootcamp • Checkpoint ES6 • Développé par <a href="https://github.com/Karma-22" target="_blank">Karma-22</a></p>
+    </footer>
+  </div>
+
+  <script type="module">
+    import * as stringUtils from './src/algorithms/stringUtils.js';
+    import * as arrayUtils from './src/algorithms/arrayUtils.js';
+    import * as mathLogic from './src/algorithms/mathLogic.js';
+    import * as katas from './src/algorithms/codewarsKatas.js';
+
+    // Strings
+    const strInput = document.getElementById('str-input');
+    const strOutput = document.getElementById('str-output');
+    document.getElementById('btn-reverse').onclick = () => {
+      strOutput.innerHTML = `<strong>Résultat :</strong> "${stringUtils.reverseString(strInput.value)}"`;
+    };
+    document.getElementById('btn-palindrome').onclick = () => {
+      const isPal = stringUtils.isPalindrome(strInput.value);
+      strOutput.innerHTML = `<strong>Palindrome :</strong> ${isPal ? '✅ Oui !' : '❌ Non'}`;
+    };
+    document.getElementById('btn-vowels').onclick = () => {
+      strOutput.innerHTML = `<strong>Nombre de voyelles :</strong> ${stringUtils.countVowels(strInput.value)}`;
+    };
+    document.getElementById('btn-mask').onclick = () => {
+      strOutput.innerHTML = `<strong>Texte masqué :</strong> ${stringUtils.maskString(strInput.value, 4)}`;
+    };
+
+    // Arrays
+    const arrInput = document.getElementById('arr-input');
+    const arrOutput = document.getElementById('arr-output');
+    const parseArr = () => arrInput.value.split(',').map(n => Number(n.trim())).filter(n => !isNaN(n));
+
+    document.getElementById('btn-minmax').onclick = () => {
+      const res = arrayUtils.findMinMax(parseArr());
+      arrOutput.innerHTML = `<strong>Min :</strong> ${res.min} | <strong>Max :</strong> ${res.max}`;
+    };
+    document.getElementById('btn-sum').onclick = () => {
+      const arr = parseArr();
+      arrOutput.innerHTML = `<strong>Somme :</strong> ${arrayUtils.sumArray(arr)} | <strong>Moyenne :</strong> ${arrayUtils.averageArray(arr).toFixed(2)}`;
+    };
+    document.getElementById('btn-dedup').onclick = () => {
+      arrOutput.innerHTML = `<strong>Sans doublons :</strong> [${arrayUtils.removeDuplicates(parseArr()).join(', ')}]`;
+    };
+    document.getElementById('btn-evens').onclick = () => {
+      arrOutput.innerHTML = `<strong>Nombres pairs :</strong> [${arrayUtils.filterEvens(parseArr()).join(', ')}]`;
+    };
+
+    // Math
+    const numInput = document.getElementById('num-input');
+    const numOutput = document.getElementById('num-output');
+    document.getElementById('btn-fact').onclick = () => {
+      const val = parseInt(numInput.value, 10);
+      numOutput.innerHTML = `<strong>${val}! =</strong> ${mathLogic.factorial(val)}`;
+    };
+    document.getElementById('btn-prime').onclick = () => {
+      const val = parseInt(numInput.value, 10);
+      numOutput.innerHTML = `<strong>${val} est premier ?</strong> ${mathLogic.isPrime(val) ? '✅ Oui' : '❌ Non'}`;
+    };
+    document.getElementById('btn-fibo').onclick = () => {
+      const val = parseInt(numInput.value, 10);
+      numOutput.innerHTML = `<strong>Fibonacci(${val}) :</strong> [${mathLogic.fibonacci(val).join(', ')}]`;
+    };
+    document.getElementById('btn-fizz').onclick = () => {
+      const val = parseInt(numInput.value, 10);
+      numOutput.innerHTML = `<strong>FizzBuzz :</strong> [${mathLogic.fizzBuzz(val).join(', ')}]`;
+    };
+
+    // Katas
+    const kataOutput = document.getElementById('kata-output');
+    document.getElementById('btn-spin').onclick = () => {
+      kataOutput.innerHTML = `<strong>spinWords("Hey fellow warriors") :</strong><br><span class="highlight">"${katas.spinWords("Hey fellow warriors")}"</span>`;
+    };
+    document.getElementById('btn-root').onclick = () => {
+      kataOutput.innerHTML = `<strong>digitalRoot(942) :</strong><br><span class="highlight">${katas.digitalRoot(942)} (9 + 4 + 2 = 15 -> 1 + 5 = 6)</span>`;
+    };
+    document.getElementById('btn-rgb').onclick = () => {
+      kataOutput.innerHTML = `<strong>rgbToHex(255, 99, 71) :</strong><br><span class="highlight">#${katas.rgbToHex(255, 99, 71)}</span>`;
+    };
+    document.getElementById('btn-likes').onclick = () => {
+      kataOutput.innerHTML = `<strong>likes(["Alex", "Jacob", "Mark", "Max"]) :</strong><br><span class="highlight">"${katas.likes(["Alex", "Jacob", "Mark", "Max"])}"</span>`;
+    };
+  </script>
+</body>
+</html>
